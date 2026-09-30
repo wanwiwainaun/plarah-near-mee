@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SomTum Map | ร้านส้มตำใกล้ฉัน</title>
+
+    <!-- Leaflet สำหรับแผนที่ -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- CSS ของเรา -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- หัวเว็บไซต์ -->
+    <header>
+        <div class="logo">🌶️ SomTum Map</div>
+        <div class="subtitle">
+            ค้นหาร้านส้มตำใกล้คุณ
+        </div>
+    </header>
+
+
+    <!-- ช่องค้นหา -->
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 ค้นหาร้านส้มตำ..."
+        >
+
+        <button onclick="findLocation()">
+            📍 ร้านใกล้ฉัน
+        </button>
+
+    </section>
+
+
+    <!-- เนื้อหาหลัก -->
+    <main class="content">
+
+        <!-- แผนที่ -->
+        <div id="map"></div>
+
+
+        <!-- รายชื่อร้าน -->
+        <aside class="shop-list">
+
+            <h2>🌶️ ร้านส้มตำ</h2>
+
+            <div id="shopContainer">
+                <!-- JavaScript จะใส่ร้านตรงนี้ -->
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- Leaflet JavaScript -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+    <!-- JavaScript ของเรา -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
